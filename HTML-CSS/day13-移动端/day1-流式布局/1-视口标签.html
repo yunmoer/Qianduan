@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0,user-scaleble=no,maximum-scalse=1.0,minimum-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 我们需要一个50x50像素的图片 直接放入iphone8里面会放大两倍 100x100 绘制造成模糊
+    我们采取的措施是放一个100x100的图片 然后手动将这个图片缩小为50x50
+    我们准备的图片比我们实际需要的大小大2倍 这种方法就是2倍图 */
+    /* <!-- 在iPhone8下面 --> */
+    img {
+      /* 原始图片100*100 */
+      width: 50px;
+      height: 50px;
+    }
+
+    .box {
+      width: 500px;
+      height: 500px;
+      border: 2px solid red;
+      background: url(images/dog.jpg) no-repeat;
+      /* 原始图片100*100 */
+      /* 背景缩放 */
+      /* background-size: 50px 50px; */
+      /* 1.只写一个参数就是宽度，然后等比例缩放 */
+      /* background-size: 50px; */
+      /* 2.里面的参数可以是百分比 相对于父盒子来说 */
+
+      /* 3.cover要完全覆盖盒子 */
+      /* background-size: cover; */
+      /* 4.contain就是宽度或者高度到了父盒子结束 等比例缩放 */
+      /* background-size: contain; */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1.物理像素 就是我们所说的分辨率 像iphone8的物理像素是750
+   2.在iPhone8里  1px 开发像素=2个物理像素-->
+
+</body>
+
+</html>

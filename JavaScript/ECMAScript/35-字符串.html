@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //字符串不可变 虽然结果看似变了 但地址变了 实际上是开辟了一个新的内存空间分配给它
+    //由于字符串不可变 所以不要大量的拼接字符串
+    var str = '改革春风吹满地，春天来了';
+    console.log('春'); //2 第一次出现的地方
+    console.log('春', 3); //8 查找3及后面的序号
+
+    var str1 = 'abcdoefocsoamowo';  //输出所有o的序号
+    var index = str1.indexOf('o');
+    var num = 0;
+    while (index != -1) {
+      console.log(index);
+      num++;
+      index = str1.indexOf('o', index + 1);
+
+    }
+    console.log('o出现的次数是：' + num);
+
+
+    var arr = ['red', 'blue', 'red', 'green', 'pink', 'red'];  //求red出现的位置和次数
+    var index1 = arr.indexOf('red');
+    while (index1 != -1) {
+      console.log(index1);
+      index1 = arr.indexOf('red', index1 + 1);
+    }
+
+
+    //根据位置返回字符
+    //1.charsetAt(index) 根据位置返回字符
+    var str2 = 'andy';
+    console.log(str2.charAt(3));
+    //遍历所有的字符
+    for (var i = 0; i < str2.length; i++) {
+      console.log(str2.charAt(i));
+    }
+    //2.charCodeAt(index)  返回相应索引号ASCII码  目的：判断用户按下哪个键
+
+
+    //统计出现次数最多的字符和次数
+    //判断一个字符串'abcoefoxyozzopp'中出现次数最多的字符，并统计其次数
+    //核心算法：利用charAt() 遍历这个字符串
+    //把每个字符都存储给对象，如果对象没有该属性，就为1，如果存在就+1
+    //遍历对象，得到最大值和该字符
+    var str3 = 'abcoefoxyozzopp';
+    var o = {};
+    for (var i = 0; i < str3.length; i++) {
+      var chars = str3.charAt(i);
+      if (o[chars]) {
+        o[chars]++;
+      } else {
+        o[chars] = 1;
+      }
+    }
+    console.log(o);
+
+    //遍历对象
+    var max = 0;
+    for (var k in o) {
+      //k得到的是属性名
+      //o[k]得到的是属性值
+      if (o[k] > max) {
+        max = o[k];
+        var ch = k;
+      }
+    }
+    console.log(max);
+    console.log('最多的字符为：' + ch);
+
+
+    //字符串操作方法
+    //1.concat 连接操作
+    var str4 = 'andy';
+    console.log(str4.concat('red'));
+    //2.substr('截取的起始位置'，''截取几个字符')
+    var str5 = '改革春风吹';
+    console.log(str5.substr(2, 2));
+    //3.replace('被替换字符','替换为的字符') 它只会替换第一个字符
+    var str6 = 'andyandy';
+    console.log(str6.replace('a', 'b'));
+    //如果有一个字符串'abcoefoxyozzopp' 要求把里面所有的o替换为*
+    var str7 = 'abcoefoxyozzopp';
+    while (str7.indexOf('o') !== -1) {
+      str7 = str7.replace('o', '*');
+    }
+    //4.字符转换为数组 split('分隔符')
+    var str8 = 'red,green,pink';
+    console.log(str8.split(','));
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

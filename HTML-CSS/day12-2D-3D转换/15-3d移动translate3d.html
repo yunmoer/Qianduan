@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      /* 透视写到被观察盒子的父盒子上  近大远小  透视越小即距离越近则物体会越大*/
+      perspective: 200px;
+      /* d:视距，是人的眼睛到屏幕的距离 越小物体越大
+      z：就是z轴，是物体距离屏幕的距离  越大物体越大*/
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      background-color: pink;
+      transform: translateZ(0);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+
+  </div>
+</body>
+
+</html>

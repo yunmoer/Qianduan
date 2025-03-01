@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      /* 使行内能有宽高 */
+      display: flex;
+      width: 80%;
+      height: 300px;
+      background-color: pink;
+      /* 可以将盒子等比距离放置 */
+      justify-content: space-around;
+    }
+
+    span {
+      width: 150px;
+      height: 100px;
+      background-color: purple;
+      margin-right: 5px;
+      /* 可以将三个盒子将大盒子等宽撑满 */
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span>1</span><span>2</span><span>3</span>
+  </div>
+</body>
+
+</html>

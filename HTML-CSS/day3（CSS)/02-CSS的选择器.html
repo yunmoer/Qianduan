@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      color: green;
+    }
+
+    div {
+      color: pink;
+    }
+
+    /* 类选择器口诀：样式点定义，结构类(class)调用 开发最常用*/
+    .red {
+      /* 背景颜色 */
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    /* 多类名使用 */
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+
+    /* id选择器的口诀：样式#定义，结构id调用，只能调用一次，别人切勿使用 */
+    #pink {
+      color: pink;
+    }
+
+    /* 通配符选择器 表示选取页面中所有元素，除了使用其他选择器的*/
+    * {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 选择器就是根据不同需求把不同的标签选出来，简单来说，就是选择标签用的 -->
+  <!-- 选择器分为基础选择器和复合选择器，基础选择器分为标签选择器，类选择器，id选择器和通配符选择器 -->
+  <!-- 标签选择器 选择某一类所有标签，不能差异化设置-->
+  <p>男生</p>
+  <p>男生</p>
+  <p>男生</p>
+  <div>女生</div>
+  <div>女生</div>
+  <div>女生</div>
+  <!-- 类选择器  可以单独选一个或者几个标签-->
+  <ul>
+    <li>冰雨</li>
+    <li>雷雨</li>
+    <li>来生缘</li>
+    <li>生僻字</li>
+    <li>时间</li>
+    <li>世界</li>
+  </ul>
+
+  <div class="red"></div>
+  <div class="green"></div>
+  <div class="red"></div>
+
+  <!-- 多类名使用 -->
+  <div class="red box"></div>
+  <div class="green box"></div>
+  <div class="red box"></div>
+
+  <!-- id选择器 -->
+  <div id="pink"></div>
+
+</body>
+
+</html>

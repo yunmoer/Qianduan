@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* * {
+      margin: 0;
+      padding: 0;
+    } */
+
+    ul li {
+      width: 150px;
+      height: 200px;
+      float: left;
+      border: 1px solid red;
+      list-style: none;
+      margin-left: -1px;
+    }
+
+    /* 如果想要点击某个盒子，盒子的边框都显示，由于之前使用了margin负值导致有一些边被压住，如果盒子没有定位，可以使用相对定位，相对定位会压住其他元素；
+    如果盒子有相对定位，可以通过z-index来提高层级 */
+    ul li:hover {
+      position: relative;
+      border: 1px solid blue;
+    }
+
+    .box1 {
+      width: 300px;
+      height: 70px;
+      background-color: pink;
+      margin: 0 auto;
+    }
+
+    .pic {
+      float: left;
+      width: 120px;
+      height: 60px;
+    }
+
+    .pic img {
+      width: 100%;
+    }
+
+    .box2 {
+      text-align: center;
+    }
+
+    .box2 a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-color: #f7f7f7;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 36px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .box2 .prev,
+    .box2 .next {
+      width: 85px;
+    }
+
+    .box2 .current,
+    .box2 .elp {
+      background-color: #fff;
+      border: none;
+    }
+
+    .box2 input {
+      width: 36px;
+      height: 36px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .box2 button {
+      width: 60px;
+      height: 36px;
+      background-color: #f7f7f7;
+      border: 1px solid #ccc;
+    }
+
+    .box3 {
+      width: 0;
+      height: 0;
+      /* 把上面的设置为transparent */
+      border-top: 100px solid transparent;
+      border-right: 50px solid skyblue;
+      /* 左边和下边的边框宽度设置为0 */
+      border-bottom: 0 solid blue;
+      border-left: 0 solid green;
+      /* border-color: transparent red transparent transparent;
+      border-style: solid;
+      border-width: 100px 50px 0 0; */
+    }
+
+    .price {
+      width: 160px;
+      height: 24px;
+      border: 1px solid red;
+      line-height: 24px;
+      margin: 0 auto;
+      background-color: #fff;
+    }
+
+    .miaosha {
+      position: relative;
+      top: 0;
+      left: 0;
+      float: left;
+      width: 60%;
+      height: 100%;
+      margin-right: 8px;
+      background-color: red;
+      text-align: center;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .miaosha i {
+      position: absolute;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-color: transparent white transparent transparent;
+      border-style: solid;
+      border-width: 24px 10px 0 0;
+    }
+
+    .origin {
+      font-size: 12px;
+      color: gray;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1.margine负值布局 各个盒子在浮动时如果都有border，使用负值可以让中间边框值为1px-->
+  <!-- <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul> -->
+
+  <!-- 2.文字围绕浮动 ：文字标准流，图片盒子浮动-->
+  <!-- <div class="box1">
+    <div class="pic">
+      <img src="image/img.png" alt="">
+    </div>
+
+    <p>热身赛-巴西0-1秘鲁 内尔马替补两人血染赛场</p>
+  </div> -->
+
+  <!-- 3.行内块巧妙运用 -->
+  <div class="box2">
+    <a href="#" class="prev">&lt;&lt; 上一页</a>
+    <a href="#" class="current">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#" class="elp">...</a>
+    <a href="#" class="next">&gt;&gt; 下一页</a>
+    到第
+    <input type="text">页
+    <button>确定</button>
+  </div>
+
+  <!-- 4.CSS三角强化 -->
+  <div class="box3"></div>
+  <div class="price">
+    <span class="miaosha">￥1650
+      <i></i>
+    </span>
+    <span class="origin">￥5650</span>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="xxx.php" method="get">
+    <!-- label 标签用于绑定一个表单元素，当点击<label>标签内的文本时，浏览器会自动将焦点转到或者选择对应的表单元素上 增加用户体验-->
+    <label for="text">用户名</label>
+    <!-- text 文本框，用户可以在里面输入任何文字 -->
+    <input type="text" id="text" name="username" value="请输入用户名" maxlength="6"> <br>
+    <!-- password 密码框，用户看不见输入的内容 -->
+    密码：<input type="password" name="pwd"> <br>
+
+    <!-- 单选按钮，只能选一个 -->
+    <!-- name是表单元素名字，这里性别单选按钮必须有相同的名字name采可以实现多选一 -->
+    <!-- 单选按钮和复选框可以设置checked属性，当页面打开的时候默认勾选 -->
+    性别：<input type="radio" name="sex" value="男" checked="checked" id="boy"> <label for="boy">男</label>
+    <input type="radio" id="girl" name="sex" value="女"> <label for="girl">女</label> <br>
+
+    <!-- checkbox 复选框，可以实现多选 -->
+    爱好：吃饭 <input type="checkbox" name="hobby"> 吃饭 <input type="checkbox" name="hobby"> 吃饭 <input type="checkbox"
+      name="hobby"> <br>
+
+    <!-- 提交按钮，可以把表单域form中的值提交给后台服务器-->
+    <input type="submit" value="免费注册">
+    <input type="reset">
+
+    <!-- 普通按钮，后期结合js搭配使用 -->
+    <input type="button" value="获取短信验证码">
+    上传图像： <input type="file"> <br>
+
+    <!-- 在页面中，如果有多个选项让用户选择，并且想要节约页面空间时，可以使用<select></select>标签定义下拉列表 -->
+    籍贯：<select>
+      <option>山东</option>
+      <option selected="selected">湖南</option>
+      <option>河南</option>
+      <option>北京</option>
+      <option>天津</option>
+      <option>云南</option>
+    </select>
+
+    <!-- 文本域 textarea 可以定义多行文本输入的控件 -->
+    今日反馈：
+    <textarea cols="50" rows="5">这个文本框是用textarea来写的</textarea>
+
+  </form>
+</body>
+
+</html>

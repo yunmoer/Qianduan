@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .peppa {
+      /* 隐藏 后不保存位置*/
+      /* display: none; */
+      /* 显示 */
+      /* display: block; */
+
+      /* visibility隐藏的时候保留位置 */
+      visibility: hidden;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+    .geoge {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 类似网站广告，当我们点击关闭就不见了，但是重新刷新页面，会重新出现；本质：让一个元素在页面中隐藏或者显示出来
+   display：none；隐藏对象；display：block；除了转换为块级元素外，同时还有显示元素的意思 
+
+   visibility属性用于指定一个元素可见还是隐藏
+   visibility：visible；元素可视
+   visibility：hidden；元素隐藏 
+
+   overflow属性指定了如果内容溢出一个元素的框（超过其指定宽度和高度）时，会发生什么
+   默认overflow：visible；显示
+   溢出部分隐藏：overflow：hidden；并没有删掉，只是隐藏。
+   overflow：scroll；滚动条，不超出也显示滚动条
+   overflow：auto；超出显示滚动条，不超出就不显示
+   如果有定位，慎用overflow：hidden，因为会隐藏多余的部分。
+   -->
+  <div class="peppa">佩奇</div>
+  <div class="geoge">乔治</div>
+</body>
+
+</html>

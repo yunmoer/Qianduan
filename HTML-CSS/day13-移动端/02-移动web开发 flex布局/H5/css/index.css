@@ -1,0 +1,370 @@
+body {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+  color: #000;
+  background: #f2f2f2;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+/* 搜素模块 */
+.search-index {
+  position: relative;
+  display: flex;
+  /* 固定的盒子应该有宽度 */
+  position: fixed;
+  top: 0;
+  /* 将其居中对齐 */
+  left: 50%;
+  width: 100%;
+  /* 要将其往左边移动半个盒子的距离 */
+  -webkit-transform: translateX(-50%);
+  min-width: 320px;
+  max-width: 540px;
+  height: 44px;
+  background-color: #f6f6f6;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.user {
+  width: 44px;
+  height: 44px;
+  /* background-color: purple; */
+  font-size: 12px;
+  text-align: center;
+  color: #2eaae2;
+}
+
+.user::before {
+  content: '';
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../images/sprite.png) no-repeat -59px -194px;
+  background-size: 104px auto;
+  margin: 3px auto 0;
+}
+
+.search {
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 9px 6px;
+  flex: 1;
+  font-size: 12px;
+  color: #666;
+  /* 行高应该要等于盒子内部距离 */
+  line-height: 23px;
+  padding-left: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+  /* background-color: skyblue; */
+}
+
+.search::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+  background: url(../images/sprite.png) no-repeat -60px -280px;
+  background-size: 104px auto;
+  /* margin: 6px 4px 6px 8px; */
+}
+
+/* 焦点图模块 */
+.focus {
+  padding-top: 44px;
+}
+
+.focus img {
+  width: 100%;
+}
+
+/* 局部导航栏 */
+.local-nav {
+  display: flex;
+  height: 64px;
+  background-color: #fff;
+  margin: 3px 4px;
+  border-radius: 8px;
+}
+
+.local-nav li {
+  flex: 1;
+}
+
+.local-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.local-nav li [class^="local-nav-icon"] {
+  width: 32px;
+  height: 32px;
+  /* background-color: pink; */
+  margin-top: 8px;
+}
+
+.local-nav-icon1 {
+  background: url(../images/localnav_bg.png) no-repeat 0 0;
+  background-size: 32px;
+}
+
+.local-nav-icon2 {
+  background: url(../images/localnav_bg.png) no-repeat 0 -32px;
+  background-size: 32px;
+}
+
+.local-nav-icon3 {
+  background: url(../images/localnav_bg.png) no-repeat 0 -64px;
+  background-size: 32px;
+}
+
+.local-nav-icon4 {
+  background: url(../images/localnav_bg.png) no-repeat 0 -96px;
+  background-size: 32px;
+}
+
+.local-nav-icon5 {
+  background: url(../images/localnav_bg.png) no-repeat 0 -128px;
+  background-size: 32px;
+}
+
+/* nav */
+.nav {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 4px 3px;
+  height: 270px;
+  background-color: #fff;
+}
+
+.nav-common {
+  display: flex;
+  height: 88px;
+  background-color: pink;
+  /* justify-content: space-between; */
+  /* flex-direction: column; */
+}
+
+.nav-common:nth-child(2) {
+  margin: 3px 0;
+}
+
+.nav-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-items:nth-child(-n+2) {
+  border-right: 2px solid #fff;
+  /* background-color: #fa5f56; */
+}
+
+.nav-items a {
+  flex: 1;
+  text-align: center;
+  line-height: 44px;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+
+.nav-items a:nth-child(1) {
+  border-bottom: 2px solid #fff;
+}
+
+.nav-items:nth-child(1) a {
+  border: 0;
+  background: url(../images/hotel.png) no-repeat bottom center;
+  background-size: 121px auto;
+}
+
+/* 背景线性渐变 */
+.nav-common:nth-child(1) {
+  background: -webkit-linear-gradient(left, #fa5f56, #fa8c4f);
+}
+
+.nav-common:nth-child(2) {
+  background: -webkit-linear-gradient(left, #4e9ced, #51b0ed);
+}
+
+.nav-common:nth-child(3) {
+  background: -webkit-linear-gradient(left, #44c793, #6ad459);
+}
+
+.subnav-entry {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 0 4px;
+  padding: 5px 0;
+  box-shadow: #000 2px 1px rgba(0, 0, 0, .2);
+}
+
+.subnav-entry li {
+  /* 子盒子可以写百分比 */
+  flex: 20%;
+}
+
+.subnav-entry a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.subnav-entry-icon {
+  width: 22px;
+  height: 22px;
+  background-color: pink;
+  margin-top: 4px;
+  background: url(../images/subnav-bg.png) no-repeat 0 0;
+  background-size: 24px;
+}
+
+.sales {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  margin: 4px;
+}
+
+.sales-hd {
+  position: relative;
+  height: 44px;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.sales-hd h2 {
+  position: relative;
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+.sales-hd h2::after {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  content: '';
+  width: 79px;
+  height: 15px;
+  /* background-color: pink; */
+  background: url(../images/hot.png) no-repeat 0 -20px;
+  background-size: 79px auto;
+}
+
+.more {
+  position: absolute;
+  right: 7px;
+  top: 0;
+  padding: 3px 20px 3px 10px;
+  border-radius: 15px;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #ff4f68, #ff6bc5);
+}
+
+.more::after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.sales-bd {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.sales-bd .row {
+  display: flex;
+}
+
+.row:nth-child(-n+2) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.row a {
+  flex: 1;
+}
+
+.row a:nth-child(1) {
+  border-right: 1px solid #f2f2f2;
+}
+
+.row a img {
+  width: 100%;
+}
+
+.user-bottom ul {
+  display: flex;
+  height: 48px;
+  margin-top: 8px;
+  border-top: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
+  margin-bottom: 5px;
+}
+
+.user-bottom li {
+  flex: 1;
+}
+
+.user-bottom a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+}
+
+.user-bottom a span {
+  margin-bottom: 3px;
+}
+
+.user-icon1 {
+  width: 18px;
+  height: 18px;
+  background: url(../images/sprite.png) no-repeat -60px -154px;
+  background-size: 104px auto;
+}
+
+.user-icon2 {
+  width: 18px;
+  height: 18px;
+  background: url(../images/sprite.png) no-repeat -60px -173px;
+  background-size: 104px auto;
+}
+
+.user-icon3 {
+  width: 18px;
+  height: 18px;
+  background: url(../images/sprite.png) no-repeat -60px -310px;
+  background-size: 104px auto;
+}

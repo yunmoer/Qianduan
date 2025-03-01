@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      margin: 100px;
+    }
+
+    ul li {
+      float: left;
+      width: 120px;
+      height: 40px;
+      margin: 20px;
+      list-style: none;
+      /* 一会要给box旋转 需要透视 干脆给li加 里面的子盒子都有透视效果 */
+      perspective: 500px;
+    }
+
+    .box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      /* 让背面的紫色盒子保留立体效果 */
+      transform-style: preserve-3d;
+      transition: all .4s;
+    }
+
+    .box:hover {
+      transform: rotateX(90deg);
+    }
+
+    .front,
+    .bottom {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .front {
+      background-color: pink;
+      z-index: 1;
+      /* 现在需要将bottom这个盒子往后移动，但是由于中心线在当前front盒子这里，那么考虑将front盒子往前移动，构成一个正方体，中心线不变，但是可以更好的旋转 */
+      transform: translateZ(20px);
+    }
+
+    .bottom {
+      background-color: purple;
+      transform: translateY(20px) rotateX(-90deg);
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <div class="box">
+        <div class="front"></div>
+        <div class="bottom"></div>
+      </div>
+    </li>
+    <li>
+      <div class="box">
+        <div class="front"></div>
+        <div class="bottom"></div>
+      </div>
+    </li>
+    <li>
+      <div class="box">
+        <div class="front"></div>
+        <div class="bottom"></div>
+      </div>
+    </li>
+    <li>
+      <div class="box">
+        <div class="front"></div>
+        <div class="bottom"></div>
+      </div>
+    </li>
+    <li>
+      <div class="box">
+        <div class="front"></div>
+        <div class="bottom"></div>
+      </div>
+    </li>
+  </ul>
+</body>
+
+</html>

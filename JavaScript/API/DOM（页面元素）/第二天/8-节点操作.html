@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 网页中所有内容都是节点  标签->元素节点 （节点类型为1，主要） 文本（文字，空格，换行）->文本节点（3）  属性->属性节点 （2）
+   节点通常有nodeType（节点类型）   nodeName（节点名称）  nodeValue（节点值）三个基本属性-->
+  <ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+  </ul>
+
+  <ol>
+    <li>我是oli</li>
+    <li>我是oli</li>
+    <li>我是oli</li>
+    <li>我是oli</li>
+    <li>我是oli</li>
+  </ol>
+  <div class="box">
+    <div class="erweima"></div>
+  </div>
+  <script>
+    // 1.父节点   parentNode
+    var erweima = document.querySelector('erweima');
+    // var box=document.querySelector('.box');
+    // 得到的是离元素最近的父级节点   如果找不到父级节点就返回null
+    erweima.parentNode;
+
+
+    // 2.子节点
+    var ul = document.querySelector('ul');
+    var lis = document.querySelectorAll('li');
+    // childNodes得到的是所有子节点 包含 元素节点 文本节点等等
+    ul.childNodes;
+    // 如果只需要里面的元素节点，需要专门处理
+    ul.childNodes[0].nodeType;  //如果不是元素节点就不打印
+
+    // children获取所有子元素节点
+    ul.children;
+
+    var ol = document.querySelector('ol');
+    // firstchild获得的是第一个节点 不管是文本节点还是元素节点
+    ol.firstChild;
+    ol.lastChild;
+    // firstElementChild返回第一个元素节点  没有返回null  有兼容性问题 ie9以上
+    ol.firstElementChild;
+    ol.lastElementChild;
+
+    ol.children[0];
+    ol.children[ol.children.length - 1];
+
+  </script>
+</body>
+
+</html>

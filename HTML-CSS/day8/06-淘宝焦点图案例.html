@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .tb-promo {
+      position: relative;
+      width: 520px;
+      height: 280px;
+      background-color: pink;
+      margin: 100px auto;
+    }
+
+    .tb-promo .img {
+      width: 100%;
+    }
+
+    /* 并集选择器可以集体声明相同的格式 */
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      width: 20px;
+      height: 30px;
+      background-color: rgb(0, 0, 0, .3);
+      text-align: center;
+      line-height: 30px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .prev {
+      left: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    .next {
+      /* 如果一个盒子既有left属性又有right属性，则会实行left属性 */
+      right: 0;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+
+    .promo-nav {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      margin-left: -35px;
+      width: 70px;
+      height: 13px;
+      background-color: rgb(255, 255, 255, .3);
+      border-radius: 5px;
+    }
+
+    .promo-nav li {
+      float: left;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+      margin: 3px;
+
+    }
+
+    .promo-nav .selected {
+      background-color: #ff5000;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="tb-promo">
+    <img src="images/tb.jpg" alt="">
+    <a href="#" class="prev">
+      < </a>
+        <a href="#" class="next">
+          > </a>
+        <ul class="promo-nav">
+          <li class="selected"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      /* 边框粗细 */
+      border-width: 5px;
+      /* solid 实线边框 默认黑色 */
+      border-style: solid;
+      /* dashed 虚线边框 */
+      border-style: dashed;
+      /* dotted 点线边框 */
+      border-style: dotted;
+      /* 边框颜色 */
+      border-color: pink;
+
+      /* 边框的复合写法 */
+      border: 5px solid red;
+
+      /* 边框分开写 只设置一边*/
+      border-top: 5px solid pink;
+      border-bottom: 6px dashed red;
+
+      /* 如果我现在想要将上边框变成粉色，其余边为蓝色 */
+      border: 5px solid blue;
+      /* 使用层叠性，下面对上边框的样式覆盖之前对上边框的样式 */
+      border-top: 5px solid pink;
+
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

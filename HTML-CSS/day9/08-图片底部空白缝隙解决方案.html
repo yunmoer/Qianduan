@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px solid red;
+    }
+
+    /* 图片和块级元素底部有空白， 是因为默认基线对齐，改vertical-align就可以*/
+    /* 或者可以将img换为块级元素，因为块级元素没有vertical-align */
+    img {
+      vertical-align: bottom;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div>
+    <img src="image/ldh.jpg" alt="">
+  </div>
+</body>
+
+</html>

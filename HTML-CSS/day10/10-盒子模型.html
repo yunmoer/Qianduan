@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /* 之前加入border和padding或者margin都会撑大盒子 */
+      border: 10px solid red;
+      box-sizing: content-box;
+    }
+
+    p {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      border: 20px solid red;
+      padding: 15px;
+      /* css3盒子模型 盒子最终的额大小就是width的大小 */
+      box-sizing: border-size;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <p></p>
+</body>
+
+</html>

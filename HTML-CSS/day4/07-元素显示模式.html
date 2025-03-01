@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      width: 200px;
+      height: 35px;
+    }
+
+    /* 将行内元素变成块元素 */
+    a {
+      width: 150px;
+      height: 50px;
+      background-color: pink;
+      display: block;
+    }
+
+    /* 将块元素转变成行内元素 */
+    div {
+      width: 300px;
+      height: 100px;
+      background-color: #333;
+      display: inline;
+    }
+
+    /* 将行内元素转变为行内块元素 */
+    span {
+      width: 300px;
+      height: 100px;
+      background-color: #fff;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--块元素：
+   1.块元素比较霸道，需要一个人独占一行 
+   2.可以设置宽度高度和内边距，外边距
+   3.块级元素是一个容器盒子，里面可以放行内或者块级元素-->
+  <!-- 注意：文字类的元素内不能使用块级元素，即比如<p></p>主要是存放文字，里面就不能放其他块级元素，特别是div -->
+
+  <!-- 行内元素
+    1.相邻行内元素在一行上，一行可以显示多个 
+    2.高，宽直接设置是无效的
+    3.它的默认宽度是本身内容的宽度
+    4.行内元素只能容纳文本或其他行内元素-->
+  <!-- 链接里面不能再放链接，但是特殊情况链接<a></a>里面可以放块级元素，但是给<a></a>转换一下块级模式最安全 -->
+
+  <!-- 行内块元素：在行内元素中有几个特殊的标签---<input/>\<img/>\<td>，它们同时具有块元素和行内元素的特点
+    1.相邻行内元素在一行上，但是他们之间会有空白缝隙，一行可以显示多个
+    2.默认宽度就是它本身内容的宽度
+    3.高度，行高、外边距以及内边距都可以控制 -->
+
+  <!-- 元素显示模式转换：特殊情况下，需要元素模式的额转换，简单理解-一个模式的元素需要另外一种模式的特性
+   语法：display:block; -->
+  <a href="#">金星阿姨</a>
+</body>
+<input type="text">
+
+</html>

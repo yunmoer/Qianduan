@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 输入的时候是字符
+    var age = prompt('请输入您的年龄');
+    var str = '您今年已经' + age + '岁了';
+    alert(str)
+
+    // 检测变量数据类型
+    console.log(typeof str);
+
+    // 数据类型转换
+    // 1.数字型转换为字符串 toString()
+    var num = 10;
+    var str = num.toString();
+    console.log(String(num));
+    // 利用+拼接字符串的方法实现转换效果
+    console.log(num + '');
+
+    // 2.转换为数字型 parseInt（变量）取整数 parseFloat（变量）取小数
+    console.log(parseInt(age));
+    console.log(parseInt('120px')); //120
+    // 利用Number（变量）
+    console.log(Number(str));
+    // 利用算法运算 -  *,没有+
+    console.log('12' - 0); //12
+
+
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

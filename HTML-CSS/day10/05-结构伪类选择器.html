@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* <!-- 选择ul中的第一个li--> */
+    /* ul li:first-child {
+      background-color: pink;
+    } */
+
+    /* 选择ul中的最后一个li */
+    /* ul li:last-child {
+      background-color: blue;
+    } */
+
+    /* 选择ul中的第n个li */
+    /* ul li:nth-child(2) {
+      background-color: skyblue;
+    } */
+
+    /* 可以是关键字：
+    将所有偶数的行选出来 */
+    ul li:nth-child(even) {
+      background-color: #ccc;
+    }
+
+    /* 将所有奇数的行选出来 */
+    ul li:nth-child(odd) {
+      background-color: #333;
+    }
+
+    /* nth-child(n) 从0开始 往后面计算 这里面必须是n 不能是其他字母 */
+    /* 选择了所有的盒子 */
+    /* ol li:nth-child(n) {
+      background-color: pink;
+    } */
+
+    /* nth-child(2n) 从相当于even */
+    /* ol li:nth-child(2n) {
+      background-color: pink;
+    } */
+
+    /* nth-child(2n+1) 从相当于odd */
+    /* ol li:nth-child(2n+1) {
+      background-color: pink;
+    } */
+
+    /* n从0开始，所以n+3就是从第三个开始往后  -n+3就是前三个 0 1 2*/
+    /* ol li:nth-child(n+3) {
+      background-color: #ccc;
+    } */
+
+    /* nth-child会把所有的盒子都排列序号 */
+    /* 执行的时候先看 ：nth-child(1)先找几个孩子 之后回去看前面div是否匹配 由于这里前面的是p，所以无法选出来*/
+    /* 权重12 */
+    section div:nth-child(1) {
+      background-color: blue;
+    }
+
+    /* nth-of-type 会把指定元素的盒子排列序号 再看第几个孩子 */
+    section div:nth-of-type(1) {
+      background-color: blue;
+    }
+  </style>
+
+</head>
+
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+  <!-- 区别 -->
+  <section>
+    <p>光头强</p>
+    <div>熊大</div>
+    <div>dionger</div>
+  </section>
+  <ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ol>
+</body>
+
+</html>

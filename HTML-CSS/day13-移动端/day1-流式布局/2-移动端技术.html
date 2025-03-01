@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      /* 点击高亮我们需要清楚 设置为transparent 完成透明 */
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    input {
+      /* 在移动端浏览器默认的外观在ios上加上这个属性才能给按钮输入框自定义样式 */
+      -webkit-appearance: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- PC端考虑兼容就用传统盒子模型 不考虑兼容用CSS3盒子模型 box-sizing：border-box  移动端直接CSS3模型就好 -->
+  <a href="#">黑马 </a>
+  <input type="button" value="">
+</body>
+
+</html>

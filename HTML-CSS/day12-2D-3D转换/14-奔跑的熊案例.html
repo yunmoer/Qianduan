@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      background: url(media/bear.png) no-repeat;
+      /* 我们元素可以添加多个动画 用逗号分隔 */
+      animation: bear 1s steps(8) infinite, move 3s forwards;
+    }
+
+    p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 336px;
+    }
+
+    p:nth-child(0) {
+      padding-top: 400px;
+      background: url(media/bg1.png) no-repeat;
+      /* 我们元素可以添加多个动画 用逗号分隔 */
+      animation: bg 18s linear infinite;
+    }
+
+    p:nth-child(1) {
+      background: url(media/bg2.png) no-repeat;
+      /* 我们元素可以添加多个动画 用逗号分隔 */
+      animation: bg 18s linear infinite;
+    }
+
+
+    @keyframes bear {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -1600px 0;
+      }
+    }
+
+    @keyframes move {
+      0% {
+        left: 0;
+        top: 280px;
+      }
+
+      100% {
+        left: 50%;
+        top: 280px;
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes bg {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -3840px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div></div>
+    <p></p>
+    <p></p>
+
+  </section>
+
+
+</body>
+
+</html>

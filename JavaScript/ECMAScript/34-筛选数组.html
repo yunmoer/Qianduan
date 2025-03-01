@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //有一个包含工资的数组[1500,1200,2000,2100,1800]，要求把数组中工资超过2000的删除，剩余的放到新数组里面
+    var arr = [1500, 1200, 2000, 2100, 1800];
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] < 2000) {
+        // newArr[new_arr.length] = arr[i];
+        newArr.push(arr[i]);
+      }
+    }
+    console.log(newArr);
+
+
+    //数组排序
+    //1.翻转数组
+    var arr = ['pink', 'red', 'blue'];
+    arr.reverse();
+    //2.数组排序(冒泡排序)
+    var arr1 = [1, 5, 9, 3, 2];
+    // arr1.sort(); //如果是[13,4,77,1,7] 这样就无法实现
+    arr1.sort(function (a, b) {
+      // return a - b;  //按照升序的顺序排列
+      return b - a;  //按照降序的顺序排列
+    })
+    // console.log();
+
+
+    //获取数组元素索引号方法  只返回第一个满足条件的索引号  如果在数字内找不到这个元素 就会返回-1
+    var arr = ['red', 'green', 'blue'];
+    console.log(arr.indexOf('blue'));
+
+    //获取数组元素索引号方法  只返回第一个满足条件的索引号(从后面开始查找)  如果在数字内找不到这个元素 就会返回-1
+    var arr = ['red', 'green', 'blue'];
+    console.log(arr.lastIndexOf('blue'));
+
+
+    //数组元素去重  首先是遍历旧数组 然后拿着旧数字元素去查询新数组 如果找不到这个元素就添加
+    // 利用indexOf来查询新数组内是否有该元素存在  如果没有就会返回-1 这个时候就加入新数组
+    //封装一个去重的函数 unique
+    function unique(arr) {
+      var newArr = [];
+      for (var i = 0; i < arr.length; i++) {
+        var index = newArr.indexOf(arr[i]);
+        if (index === -1) {
+          newArr.push(arr[i]);
+        }
+      }
+      return newArr;
+    }
+    var demo = unique(['c', 'a', 'd', 'b', 'a', 'e', 'd']);
+    console.log(demo);
+
+    //数组转换为字符串 toString()
+    var arr = [1, 2, 3];
+    console.log(arr.toString());
+    //join(分隔符)
+    var arr1 = ['green', 'blue', 'pink'];
+    console.log(arr1.join()); //green,blue,pink
+    console.log(arr1.join('-')); //green-blue-pink
+    console.log(arr1.join('&')); //green&blue&pink
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

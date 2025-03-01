@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      perspective: 500px;
+      /* 控制子元素是否开启三维立体环境  transform-style：flat默认不开启 虽然给的是父元素 但是影响的是子元素 */
+      transform-style: preserve-3d;
+      transition: all 1s;
+    }
+
+    div:hover {
+      transform: rotateY(30deg);
+    }
+
+    .box1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: pink;
+    }
+
+    .box2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: purple;
+      transform: rotateX(60deg);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </div>
+</body>
+
+</html>

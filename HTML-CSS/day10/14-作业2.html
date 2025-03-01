@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .outer {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin: 10px auto;
+      background-color: #ff6700;
+    }
+
+    .inter {
+      width: 80px;
+      height: 40px;
+      transition: all .3s;
+    }
+
+    ul li {
+      list-style: none;
+      float: left;
+    }
+
+    ul li img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .outer:hover .inter {
+      margin-left: -40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="inter">
+      <ul>
+        <li>
+          <img src="images/mi-home.png" alt="">
+        </li>
+        <li>
+          <img src="images/mi-logo.png" alt="">
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+
+</html>

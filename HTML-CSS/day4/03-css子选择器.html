@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 语法：元素1>元素2 {样式声明} 元素1和元素2用大于号隔开，元素2必须是亲儿子*/
+    /* 第一个nav中选择的是所有的元素，但第二个只会选择第一个a */
+    .nav {
+      color: pink;
+    }
+
+    .nav>a {
+      color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 子选择器只能选择作为某元素的最近一级子元素，也就是亲儿子元素 -->
+  <div class="nav">
+    <a href="#">儿子</a>
+    <p>
+      <a href="#">孙子</a>
+    </p>
+  </div>
+</body>
+
+</html>

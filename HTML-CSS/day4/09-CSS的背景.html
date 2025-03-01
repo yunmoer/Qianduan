@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 300px;
+      background-image: url(images/logo.jpg);
+      background-repeat: no-repeat;
+      /* 页面元素既可以添加背景颜色也可以添加背景图片，只不过背景图片会压住背景颜色 */
+      /* 此时水平靠右侧对齐，第二个参数省略y轴是垂直居中显示的 */
+      background-position: right;
+      /* 第一个参数是top的话一定是y轴顶部对齐，第二个参数省略x，则是水平居中对齐的 */
+      background-position: top;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 1.背景图片background-image属性描述了元素的背景图像。实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制位置 -->
+  <!-- 语法：background-image: none|url() -->
+
+  <!-- 2.背景平铺：background-repeat 
+   语法：background-repeat:repeat|no-repeat|repreat-x|repeat-y
+   默认情况下是平铺的；repeat-x是沿着x轴平铺；repeat-y是沿着y轴平铺-->
+
+  <!-- 3.背景图片位置：background-position: x y;  参数代表的意思是：x坐标和y坐标。可以使用方位名词或者精准单位
+    如果两个词都使用方位名词的时候方位名词的前后顺序不会有影响，比如center right和right center效果是一样的
+    如果只指定了一个方位名词，默认第二个方位名词是居中
+     -->
+  <div>
+  </div>
+</body>
+
+</html>

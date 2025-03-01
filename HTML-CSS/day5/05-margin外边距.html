@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+    }
+
+    .one {
+      margin-bottom: 20px;
+    }
+
+    /* margin简写的方式和padding是一样的 */
+    /* margin可以让块级盒子水平居中
+    1.盒子必须设置了宽度；
+    2.保证盒子左右外边距都设置为auto 
+    .header {width: 960px; margin:0 auto;*/
+
+    /* 上面方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加text-align：center即可 */
+
+    /* 外边距合并：使用margin定义块元素的垂直外边距时，可能会出现外边距的合并
+     对于两个嵌套关系的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值
+     解决方案：
+     1.可以为父元素定义一个上边框，如果不想要，可以将其改为transparent
+     2.可以为父元素定义上内边距
+     3.可以为父元素添加overflow：hidden*/
+
+    /* 网页元素很多时候都带有默认的内外边距，而且不同的浏览器默认的也不一致。因此我们在布局前，首先要清除下网页元素的内外边距 
+     语法： * {padding:0;margin:0;}*/
+
+    /* 行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距。但是转换为块级和行内块元素就好了  */
+  </style>
+</head>
+
+<body>
+  <div class="one">1</div>
+  <div>2</div>
+</body>
+
+</html>

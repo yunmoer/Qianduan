@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 未访问过的链接a:link 把未访问过的链接全部选出来*/
+    a:link {
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* a:visited 选择点击过的（访问过的）链接 */
+    a:visited {
+      color: yellow;
+    }
+
+    /* a:hover 选择鼠标经过的那个链接 */
+    a:hover {
+      color: skyblue;
+    }
+
+    /* a:active 选择的是我们鼠标正在按下还没有弹起鼠标的那个链接 */
+    a:active {
+      color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 伪类选择器用于向某些选择器添加特殊的效果，比如给 链接添加特殊效果，或选择第一个，第n个元素 -->
+  <!-- 伪类选择器书写最大的特点是用冒号（：）表示 -->
+  <!-- 为了确保生效，需要按照上面四个顺序来 -->
+  <!-- 链接需要另外指定样式 -->
+  <!-- 在开发的时候，通常都只需要使用hover，所以我们通常给a指定一个样式，再使用hover来指定一个样式 -->
+  <a href="小猪佩奇"></a>
+</body>
+
+</html>

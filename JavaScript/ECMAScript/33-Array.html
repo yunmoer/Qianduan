@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //利用new Array()
+    var arr1 = new Array(); //创建一个空数组
+    var arr2 = new Array(2); //创建一个2个元素为空的数组
+    var arr3 = new Array(1, 12); //创建一个有2个元素：1,12 的数组
+
+    //检测是否为数组
+    //instanceof 运算符 它可以用来检测是否为数组
+    var arr = [1, 2, 3];
+    console.log(arr instanceof Array);
+
+    //Array.isArray(参数) H5新增的方法 ie9以上浏览器才可用
+    console.log(Array.isArray(arr));
+
+    //添加删除数组元素方法
+    //push() 在我们数组的末尾 添加一个或者多个数组元素 push 推  追加元素  push完毕之后，返回的结果是新数组的长度
+    var arr = [1, 2, 3]
+    arr.push(4, 'pink');
+    console.log(arr);
+
+    //unshift 在数组开头添加一个或者多个元素  完毕之后也会有返回值 为新数组的长度 
+    arr.unshift('red', 'purple');
+    console.log(arr);
+
+    //pop()可以删除数组的最后一个元素 返回它删除的最后一个元素的值
+    console.log(arr.pop());
+    console.log(arr);
+
+    //shift()可以删除数组的第一个元素 返回它删除的第一个元素的值
+    console.log(arr.shift());
+    console.log(arr);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

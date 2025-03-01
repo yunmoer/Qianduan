@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 0;
+      height: 0;
+      /* border: 30px solid pink; */
+      border-right: 30px solid red;
+      border-top: 30px solid blue;
+      border-bottom: 30px solid green;
+      border-left: 30px solid pink;
+    }
+
+    .box2 {
+      /* 不要宽高，其他三边都是透明的，只有一边是有颜色的，需要朝又指的给左边颜色（相反的给颜色） */
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      border: 30px solid transparent;
+      border-bottom-color: pink;
+    }
+
+    .jd {
+      position: relative;
+      width: 120px;
+      height: 249px;
+      background-color: pink;
+    }
+
+    .jd span {
+      position: absolute;
+      right: 15px;
+      top: -10px;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      border: 5px solid transparent;
+      border-bottom-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="jd">
+    <span></span>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 我想把ol中的li选出来改为pink */
+    /* <!-- 1.后代选择器 -->
+  <!-- 后代选择器又称为包含选择器，可以选择父元素里面的子元素。其写法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔： -->
+  <!-- 元素1 元素2 {样式声明}  选择元素1里面的所有元素2（后代元素）--> */
+
+    ol li {
+      color: pink
+    }
+
+    /* 元素1和元素2必须用空格隔开；元素1是父级，元素2是子级，元素2只要是元素1的后代即可：儿子，孙子都可以 */
+    ol li a {
+      color: green;
+    }
+
+    /* 当里面有两个相同的父级难以区分时，可以用类名来进行区分 */
+    .nav li a {
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 复合选择器是建立在基础选择器上，对基本选择器进行组合形成的 -->
+  <!-- 复合选择器分为后代选择器，子选择器，并集选择器和伪类选择器 -->
+
+  <ol>
+    <li>我是ol的孩子</li>
+    <li>我是ol的孩子</li>
+    <li>我是ol的孩子</li>
+    <li>我是ol的孩子</li>
+    <li><a href="#">我是ol的孩子</a></li>
+
+  </ol>
+  <ul>
+    <li>我是ul的孩子</li>
+    <li>我是ul的孩子</li>
+    <li>我是ul的孩子</li>
+    <li><a href="#">我是ul的孩子</a></li>
+
+  </ul>
+  <ul class="nav">
+    <li>我是ul的孩子</li>
+    <li>我是ul的孩子</li>
+    <li>我是ul的孩子</li>
+    <li><a href="#">我是ul的孩子</a></li>
+
+  </ul>
+</body>
+
+</html>

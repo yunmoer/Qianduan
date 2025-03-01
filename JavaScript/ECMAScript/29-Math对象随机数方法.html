@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //1.Math对象随机数方法 random() 返回一个随机的小数 
+    //2.这个方法里面不跟参数
+    //3.代码
+    console.log(Math.random());
+    //4.我们需要得到两个数之间的随机整数 并且包含着2个整数
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    console.log(getRandom(1, 10));
+
+    //随机点名
+    var arr = [0, 1, 2, 3, 4]; //人名
+    console.log(arr[getRandom(0, arr.length - 1)]);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

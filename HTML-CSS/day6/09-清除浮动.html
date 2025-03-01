@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <!-- 清除浮动的本质是清除浮动元素造成的影响
+   语法： 选择器{clear:left/right/both}
+   清除浮动的方法：
+   1.额外标签法也称为隔墙法，是W3C的做法；
+   2.父级添加overflow属性；
+   3.父级添加:after伪元素；
+   4.父级添加双伪元素 -->
+
+  <!-- 1.额外标签法 .
+    额外标签法会在浮动元素末尾添加一个空的标签。例如
+    <div style="clear:both"></div>   这个后面新增的标准流盒子必须是块级元素而不是行内元素-->
+
+  <!-- 2.父级添加overflow 
+     给父级添加overflow属性，将其属性值设置为hidden，auto或者scoll-->
+
+  <!-- 3.给父级添加：after伪元素
+   语法： 
+   .clearfix:after {
+   content: "";
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;}
+   .cleardix {
+   *zoom: 1;} 
+   在浮动的父盒子内调用，复制即可-->
+
+  <!-- 4.父级添加双伪元素
+    语法：
+     .clearfix:before,
+     .clearfix:after {
+     content: "";
+     display: table;}
+     .clearfix:after {
+     clear: both;}
+     .clearfix {
+     *zoom: 1;}-->
+</body>
+
+</html>

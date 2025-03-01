@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+      /* 1.我们translate里面的参数可以用%
+      2.如果里面的参数是% 移动的距离是 盒子自身的宽度或者高度来对比的 */
+      /* 这里的额50%就是50px，因为宽度是100px */
+      transform: translateX(50%);
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      background-color: purple;
+      /* margin-top: -100px;
+      margin-left: -100px; */
+      /* 盒子往上走自己高度的一半 */
+      transform: translate(-50%, -50%);
+      /* translate对行内标签没有效果 */
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 60px;
+      height: 60px;
+      margin: 100px auto;
+      background: #000 url(images/sprites.png) no-repeat -182px 0px;
+    }
+
+    .box2 {
+      width: 27px;
+      height: 25px;
+      margin: 200px;
+      background: #000 url(images/sprites.png) no-repeat -155px -106px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CSS精灵技术：将网页中的一些小背景图像整合到一张大图中，这样服务器就只需要一次请求就可以了 (背景图片)-->
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+
+</html>

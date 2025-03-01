@@ -1,0 +1,108 @@
+// 首页的样式less文件
+@import "common";
+
+// @import 导入的意思是可以把一个样式文件导入另外一个样式文件里面
+// link只能将样式文件导入html文件中
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #f2f2f2;
+}
+
+@basefont: 50;
+
+.search-content {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: (88rem / @basefont);
+  background-color: #ffc001;
+
+  .classify {
+    width: (44rem / @basefont);
+    height: (70rem / @basefont);
+    background: url(../images/classify.png) no-repeat;
+    background-size: (44rem / @basefont) (70rem / @basefont);
+    margin: (11rem / @basefont) (25rem / @basefont) (7rem / @basefont) (24rem / @basefont);
+  }
+
+  .search {
+    flex: 1;
+
+    input {
+      width: 100%;
+      height: (66rem / @basefont);
+      border-radius: (33rem / @basefont);
+      border: 0;
+      background-color: #fff2cc;
+      margin: (10rem / @basefont) 0;
+      outline: none;
+      color: #757575;
+      font-size: (25rem / @basefont);
+      padding-left: (55rem / @basefont);
+    }
+  }
+
+  .login {
+    width: (75rem / @basefont);
+    height: (70rem / @basefont);
+    margin: (10rem / @basefont);
+    font-size: (25rem / @basefont);
+    text-align: center;
+    line-height: (70rem / @basefont);
+    color: #fff;
+  }
+}
+
+// banner
+.banner {
+  width: (750rem / @basefont);
+  height: (368rem / @basefont);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ad {
+  display: flex;
+  width: (750rem / @basefont);
+
+  a {
+    flex: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.nav {
+  width: (750rem / @basefont);
+
+  a {
+    float: left;
+    width: (150rem / @basefont);
+    height: (140rem / @basefont);
+    text-align: center;
+
+    img {
+      display: block;
+      width: (82rem / @basefont);
+      height: (82rem / @basefont);
+      margin: (10rem / @basefont) auto 0;
+    }
+
+    span {
+      font-size: (25rem / @basefont);
+      color: #333;
+    }
+  }
+}
