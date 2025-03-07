@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- BOM是浏览器对象模型，它提供了独立于内容而与浏览器窗口进行交互的对象，其核心对象是window -->
+  <script>
+    var num = 10;
+    console.log(num);
+    console.log(window.num);
+    function fn() {
+      console.log(11);
+
+    }
+    fn();
+    // 函数变成window里面的方法  可以省略window   alert、prompt
+    window.fn();
+    alert('11');
+
+    // window下的一个特殊属性window.name   所以定义变量的时候不要定义为name
+
+  </script>
+</body>
+
+</html>

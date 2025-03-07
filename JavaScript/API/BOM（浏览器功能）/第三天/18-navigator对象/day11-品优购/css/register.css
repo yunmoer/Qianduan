@@ -1,0 +1,166 @@
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.style_red {
+  color: #c81623;
+}
+
+header {
+  height: 84px;
+  border-bottom: 2px solid #b1191a;
+}
+
+.logo {
+  padding-top: 18px;
+}
+
+.registerarea {
+  height: 522px;
+  border: 1px solid #dfdfdf;
+}
+
+.registerarea .register_hd {
+  height: 42px;
+  line-height: 42px;
+  background-color: #ececec;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.register_hd h3 {
+  float: left;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #333333;
+}
+
+.register_hd h5 {
+  float: right;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+
+.register_bd {
+  width: 600px;
+  margin: 55px auto 0;
+}
+
+.register_bd ul li {
+  margin-bottom: 20px;
+}
+
+.register_bd ul li label {
+  display: inline-block;
+  width: 88px;
+  text-align: right;
+}
+
+.register_bd ul li .inp {
+  width: 242px;
+  height: 37px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #4c4c4c;
+}
+
+.error {
+  color: #df3033;
+}
+
+.error .error_icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background: url(../images/error.png) no-repeat;
+  margin-top: -2px;
+  margin-right: 2px;
+}
+
+.success {
+  color: green;
+}
+
+.success .success_icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background: url(../images/checked.png) no-repeat;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.safe {
+  padding-left: 170px;
+}
+
+.safe em {
+  padding: 0 12px;
+  color: #fff;
+}
+
+.ruo {
+  background-color: #de1111;
+}
+
+.zhong {
+  background-color: #40b83f;
+}
+
+.qiang {
+  background-color: #f79100;
+}
+
+.agree {
+  padding-left: 95px;
+  margin-top: 30px;
+}
+
+.agree input {
+  vertical-align: middle;
+}
+
+.agree a {
+  color: #1ba1e6;
+}
+
+.btn {
+  width: 200px;
+  height: 34px;
+  line-height: 34px;
+  margin: 40px 0 0 105px;
+  background-color: #c81623;
+  text-align: center;
+
+}
+
+.btn input {
+  background-color: #c81623;
+  font-size: 14px;
+  color: #fff;
+}
+
+.mod_copyright {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+
+.mod_copyright .links {
+  margin-bottom: 15px;
+}
+
+.mod_copyright .links a {
+  padding: 0 14px;
+  border-right: 1px solid #999999;
+}
+
+.mod_copyright .links a:last-child {
+  border-right: 0;
+}

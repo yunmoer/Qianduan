@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 事件流描述的是从页面中接收事件的顺序
+   事件发送时会在元素节点之间按照特定的顺序传播 这个传播过程就是DOM事件流 -->
+  <div class="father">
+    <div class="son">son盒子</div>
+  </div>
+  <script>
+    // 阻止冒泡  dom推荐的标准 stopPropagation()
+    var son = document.querySelector('.son');
+    son.addEventListener('click', function (e) {
+      alert('son');
+      e.stopPropagation();
+      e.cancelBubble = true;  //非标准 
+    }, false)
+    var father = document.querySelector('.father');
+    father.addEventListener('click', function () {
+      alert('father');
+    }, false)
+
+    // 有一些事件没有冒泡 onblur onfocus
+  </script>
+</body>
+
+</html>

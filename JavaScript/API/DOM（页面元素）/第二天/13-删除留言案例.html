@@ -25,11 +25,15 @@
       margin: 10px 0 0 50px;
       color: red;
     }
+
+    li a {
+      float: right;
+    }
   </style>
 </head>
 
 <body>
-  <textarea name="" id="">123</textarea>
+  <textarea name="" id=""></textarea>
   <button>发布</button>
   <ul>
 
@@ -46,10 +50,18 @@
         alert('您没有输入内容');
       } else {
         var li = document.createElement('li');
-        li.innerHTML = text.value;
+        li.innerHTML = text.value + "<a href='javascript:;'>删除</a>";
         // (2)添加元素
         // ul.appendChild(li);
         ul.insertBefore(li, ul.children[0]);
+        // 删除元素 删除的是当前链接的li
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+          as[i].onclick = function () {
+            // node.removeChild(child);  删除的额是li  当前a所在的li   this.parentNode;
+            ul.removeChild(this.parentNode);
+          }
+        }
       }
 
     }

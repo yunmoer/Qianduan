@@ -1,0 +1,205 @@
+.summary {
+  /* display: none; */
+  width: 210px;
+  height: 45px;
+  line-height: 45px;
+  background-color: #c81623;
+  margin-top: 2px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+.goods {
+  height: 608px;
+}
+
+.iphone_lf {
+  float: left;
+}
+
+.iphone_lf h5 {
+  height: 24px;
+  margin-top: 22px;
+  font-size: 12px;
+  color: #666666;
+}
+
+.iphone_lf h5 i {
+  width: 44px;
+  padding: 12px;
+}
+
+.iphone_lf .iphone {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ededed;
+  margin-top: 6px;
+}
+
+.iphone_lf .iphone img {
+  width: 100%;
+  height: 100%;
+}
+
+.iphone_rg {
+  float: left;
+  margin-left: 70px;
+}
+
+.iphone_rg h3 {
+  height: 35px;
+  line-height: 35px;
+  margin: 25px 0 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.iphone_rg p {
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #e12228;
+}
+
+.iphone_rg .price {
+  width: 718px;
+  height: 113px;
+  background-color: #fee9eb;
+  padding-bottom: 20px;
+}
+
+table td {
+  color: #999;
+}
+
+.label {
+  width: 70px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  /* vertical-align: top; */
+}
+
+.price h1 {
+  color: #e12228;
+  font-size: 24px;
+}
+
+.price h1 span {
+  font-size: 16px;
+}
+
+.price h1 em {
+  font-size: 12px;
+  font-weight: normal;
+  color: #c81623;
+}
+
+.price i {
+  width: 40px;
+  height: 22px;
+  line-height: 22px;
+  margin-right: 5px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #c81623;
+}
+
+.icon {
+  font-family: 'icomoon';
+  content: '\e91e';
+  margin: 0px 10px 0 6px;
+}
+
+.bd {
+  width: 546px;
+  height: 98px;
+  /* padding-top: 15px; */
+  border-bottom: 1px solid #ededed;
+}
+
+.bd table tr {
+  height: 30px;
+}
+
+.kinds {
+  position: relative;
+  margin-top: 5px;
+  border-bottom: 1px solid #ededed;
+}
+
+.kinds ul li {
+  float: left;
+  width: 82px;
+  height: 42px;
+  line-height: 42px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  text-align: center;
+  background-color: #f7f7f7;
+  color: #333333;
+  border: 1px solid #ededed;
+}
+
+.kinds ul li:hover {
+  border: 1px solid #c81623;
+}
+
+.kinds table tr span {
+  position: absolute;
+  top: 43px;
+  left: 225px;
+  width: 312px;
+  height: 1px;
+  background-color: #ededed;
+}
+
+.car button {
+  width: 142px;
+  height: 46px;
+  margin-top: 6px;
+  background-color: #c81623;
+  font-size: 16px;
+  color: #fff;
+}
+
+.pre {
+  position: relative;
+  height: 160px;
+  width: 400px;
+  padding-top: 65px;
+}
+
+.pre .pre_hd .img1 {
+  float: left;
+  width: 58px;
+  height: 58px;
+  margin-left: 50px;
+
+}
+
+.img1:hover {
+  border: 1px solid #c81623;
+}
+
+.pre_hd .pre_lf {
+  position: absolute;
+  top: 76px;
+  left: 0;
+}
+
+.pre_hd .pre_rg {
+  position: absolute;
+  top: 78px;
+  right: 0;
+}
+
+.pre_bd ul li {
+  float: left;
+  margin-right: 30px;
+  margin-top: 28px;
+}
+
+.pre_bd ul li:last-child {
+  float: right;
+}

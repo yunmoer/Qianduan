@@ -1,0 +1,154 @@
+.nav {
+  overflow: hidden;
+}
+
+.sk {
+  position: absolute;
+  left: 190px;
+  top: 40px;
+  padding: 3px 0 0 14px;
+  border-left: 1px solid #c815c8;
+}
+
+.sk_list {
+  float: left;
+}
+
+.sk_list ul li {
+  float: left;
+}
+
+.sk_list ul li a {
+  display: block;
+  height: 46px;
+  padding: 0 28px;
+  line-height: 46px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+
+.sk_con {
+  float: left;
+}
+
+.sk_con ul li {
+  float: left;
+}
+
+.sk_con ul li a {
+  display: block;
+  height: 46px;
+  padding: 0 20px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #000;
+}
+
+.sk_con ul li:last-child a::after {
+  font-family: 'icomoon';
+  content: '\e91e';
+}
+
+.sk_bd ul {
+  margin-top: 12px;
+}
+
+/* 小li本身就拥有1像素的边框，所以可以将它先设置为透明，后面当鼠标放上去之后再将边框显示为需要的颜色就可以 */
+.sk_bd ul li {
+  float: left;
+  width: 290px;
+  height: 460px;
+  padding: 0 12px;
+  margin: 12px 12px 12px 0;
+  border: 1px solid transparent;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.sk_bd ul li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.sk_bd ul li:hover {
+  border: 1px solid #e12228;
+}
+
+.sk_bd ul li p {
+  margin: 6px 0 10px 0;
+  color: #666666;
+  font-size: 14px;
+}
+
+.sk_bd ul li .price {
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.sk_bd ul li .price .miaosha {
+  /* margin-left: -2px; */
+  color: red;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.sk_bd ul li .price .miaosha span {
+  font-size: 14px;
+}
+
+.sk_bd ul li .price .origin {
+  color: #a4a4a4;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.sk_bd ul li .bar span {
+  float: left;
+  /* margin-left: 3px; */
+  font-size: 10px;
+  color: #666666;
+
+}
+
+.sk_bd ul li .bar span i {
+  color: red;
+  font-style: normal;
+}
+
+.sk_bd ul li .bar .bar_outer {
+  float: left;
+  width: 130px;
+  height: 12px;
+  border-radius: 5px;
+  border: 1px solid #b1191a;
+  margin: 0 4px 0 8px;
+  /* vertical-align: middle; */
+}
+
+.sk_bd ul li .bar .bar_outer .bar_in {
+  width: 87%;
+  height: 100%;
+  background-color: #f24349;
+  transition: all .5s;
+}
+
+.sk_bd ul li .bar .bar_outer:hover .bar_in {
+  width: 100%;
+}
+
+.sk_bd ul li button {
+  width: 288px;
+  height: 50px;
+  margin-top: 8px;
+  margin-left: -12px;
+  background-color: #b1191a;
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+  border: 0;
+}
+
+.sk_container {
+  overflow: auto;
+}

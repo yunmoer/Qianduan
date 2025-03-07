@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <script>
+    var div = document.querySelectorAll('div');
+    div[0].onclick = function () {
+      alert(1);
+      // 1.传统方式删除事件
+      div[0].onclick = null;
+    }
+    div[1].addEventLinear('click', fn)   //里面的fn 不需要调用小括号
+    function fn() {
+      alert(22);
+      div[1].removeEventListener('click', fn);
+    }
+
+  </script>
+</body>
+
+</html>
