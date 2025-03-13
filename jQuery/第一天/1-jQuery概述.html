@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- JavaScript就是一个js文件，里面对原生js代码进行封装，存放到里面 -->
+  <!-- 比如jQuery，就是为了快速方便的操作DOM，里面基本上都是函数  -->
+  <div></div>
+  <script>
+
+    // 1.等着页面dom加载完毕再执行js代码   等同于DOMContentLoaded
+    $(document).ready(function () {
+      $('div').hide();
+    })
+    // 2.等着页面dom加载完毕再执行js代码      等着dom结构渲染完毕即可执行内部代码，不必等到所有外部资源（js文件、css文件等）加载完成，jquery帮助完成封装
+    $(function () {
+      $('div').hide();
+    })
+  </script>
+</body>
+
+</html>

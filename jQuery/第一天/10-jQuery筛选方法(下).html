@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+</head>
+
+<body>
+  <ol>
+    <li>我是ol的li</li>
+    <li>我是ol的li</li>
+    <li class="item">我是ol的li</li>
+    <li>我是ol的li</li>
+    <li>我是ol的li</li>
+  </ol>
+  <ul>
+    <li>我是ul的li</li>
+    <li>我是ul的li</li>
+    <li>我是ul的li</li>
+    <li>我是ul的li</li>
+    <li>我是ul的li</li>
+    <li>我是ul的li</li>
+  </ul>
+  <div class="current">有current</div>
+  <div>没有current</div>
+  <script>
+    $(function () {
+      // 1.兄
+      // $("ol .item").siblings("li").css("color", "red");   //除了自身之外的所有直系兄弟
+      $("ol .item").nextAll("li").css("color", "green");   //自身元素之后的所有直系兄弟
+      $("ol .item").prevAll("li").css("color", "blue");   //自身之前的所有直系兄弟
+
+      // 2.第n个元素
+      // (1)可以使用选择器的方式选择
+      $("ul li:eq(2)").css("color", "red");
+      // 可以使用选择方法的方式选择  更推荐这种方法  因为可以使用变量
+      // $("ul li").eq(index).css("color", "red");
+
+      // 3.判断是否有某个类名
+      $("div:first").hasClass("current");
+      $("div:last").hasClass("current");
+    })
+  </script>
+</body>
+
+</html>

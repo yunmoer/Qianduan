@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 事件修饰符  有条件才触发   定义方法时需要定义形参来接收传入的实参   事件后面跟上.修饰符可以对事件进行限制-->
+  <div id="app" @click="doIt('666')"></div>
+  <input type="text" name="" id="" @keyup.enter="sayHi">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      methods: {
+        doIt: function (p1) {
+          console.log('做It');
+          console.log(p1);
+        },
+        sayHi: function () {
+          alert('吃了没');
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

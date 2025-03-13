@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+  <style>
+    div {
+      width: 150px;
+      height: 150px;
+      background-color: pink;
+      margin: 100px auto;
+    }
+
+    .current {
+      background-color: red;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    $(function () {
+      // 1.添加类 addClass()   className会覆盖原先的样式，而addClass只是在原先的基础上加
+      // $("div").click(function () {
+      //   $(this).addClass("current");
+      // })
+      // 2.删除类 removeClass()
+      // $("div").click(function () {
+      //   $(this).removeClass("current");
+      // })
+      // 3.切换类toggleClass()
+      $("div").click(function () {
+        $(this).toggleClass("current");
+      })
+    })
+  </script>
+</body>
+
+</html>

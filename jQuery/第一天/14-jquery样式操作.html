@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    // 操作样式之css方法: 属性名必须要加引号，属性值为数字可以不加单位和引号
+    $(function () {
+      $("div").css("width");   //返回的是原先的属性值
+      $("div").css("width", "300px");
+      $('div').css({
+        width: 400,
+        hiegth: 400,
+        backgroundColor: "red"
+        // 如果是复合属性必须采取驼峰命名法，属性不是数值的时候必须加引号   中间用逗号分隔
+      })
+    })
+  </script>
+
+</body>
+
+</html>

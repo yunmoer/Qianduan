@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery.min.js"></script>
+  <style>
+    div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <button>显示</button>
+  <button>隐藏</button>
+  <button>切换</button> -->
+
+  <!-- <button>下拉滑动</button>
+  <button>上拉滑动</button>
+  <button>切换滑动</button> -->
+
+  <!-- <button>淡入效果</button>
+  <button>淡出效果</button>
+  <button>淡入淡出切换</button>
+  <button>修改透明度</button> -->
+
+  <button>动起来</button>
+  <div></div>
+  <script>
+    // 显示隐藏：show(),hide(),toggle()
+    // $(function () {
+    //   $("button").eq(0).click(function () {
+    //     $("div").show(1000, function () {
+    //       alert(1);
+    //     });  //1s
+    //   })
+    //   $("button").eq(1).click(function () {
+    //     $("div").hide(1000, function () {
+    //       alert(1);
+    //     });  //1s
+    //   })
+    //   $("button").eq(2).click(function () {
+    //     $("div").toggle(1000, function () {
+    //       alert(1);
+    //     });  //1s
+    //   })
+    //   // 一般情况都不加参数直接隐藏就可以
+    // })
+
+
+    // 滑动：slideDown(),slideUp(),slideToggle()
+    // $(function () {
+    //   $("button").eq(0).click(function () {
+    //     // 下滑动 slideDown
+    //     $("div").slideDown();  //1s
+    //   })
+    //   $("button").eq(1).click(function () {
+    //     $("div").slideUp();  //1s
+    //   })
+    //   $("button").eq(2).click(function () {
+    //     $("div").slidetoggle(1000, function () {
+    //       alert(1);
+    //     });  //1s
+    //   })
+    //   // 一般情况都不加参数直接隐藏就可以
+    // })
+
+
+    // 淡入淡出：fadeIn(),fadeOut(),fadeToggle(),fadeTo()
+    // $(function () {
+    //   $("button").eq(0).click(function () {
+    //     // 淡入fadeIn
+    //     $("div").fadeIn(1000);  //1s
+    //   })
+    //   $("button").eq(1).click(function () {
+    //     // 淡出fadeOut
+    //     $("div").fadeOut();  //1s
+    //   })
+    //   $("button").eq(2).click(function () {
+    //     // 淡入淡出切换fadeToggle
+    //     $("div").fadeToggle(1000, function () {
+
+    //     });  //1s
+    //   })
+    //   $("button").eq(3).click(function () {
+    //     // 修改透明度 fadeTo() 这个速度和透明度必须写
+    //     $("div").fadeTo(1000, 0.5);  //1s
+    //   })
+    //   // 一般情况都不加参数直接隐藏就可以
+    // })
+
+    // 自定义动画：animate()
+    $(function () {
+      $("button").click(function () {
+        $("div").animate({
+          left: 200,
+          top: 300
+        }, 500);  //500毫米时间
+      })
+    })
+
+
+
+  </script>
+</body>
+
+</html>
